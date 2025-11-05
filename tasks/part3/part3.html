@@ -3,45 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="part3.css">
+      <link rel="stylesheet" href="part3.js">
     <title>JavaScript Basics Presentation</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        margin: 0;
-        padding: 20px;
-      }
-      .slide {
-        display: none;
-        width: 1000px;
-        margin: auto;
-      }
-      .active {
-        display: block;
-      }
-      button {
-        padding: 10px 20px;
-        margin: 20px;
-        font-size: 16px;
-        cursor: pointer;
-      }
-      pre {
-        text-align: left;
-        background: #f4f4f4;
-        padding: 10px;
-        border-radius: 5px;
-        overflow-x: auto;
-      }
-      .output {
-        font-style: italic;
-        color: #555;
-      }
-      ul,
-      ol {
-        text-align: left;
-        margin-top: 10px;
-      }
-    </style>
+
   </head>
   <body>
     <h1>JavaScript Pamati</h1>
@@ -99,24 +64,5 @@
     <button onclick="prevSlide()">Iepriekšējais</button>
     <button onclick="nextSlide()">Nākamais</button>
 
-    <script>
-      let currentSlide = 0;
-      const slides = document.querySelectorAll(".slide");
-
-      function showSlide(index) {
-        slides.forEach((slide) => slide.classList.remove("active"));
-        slides[index].classList.add("active");
-      }
-
-      function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-      }
-
-      function prevSlide() {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(currentSlide);
-      }
-    </script>
   </body>
 </html>

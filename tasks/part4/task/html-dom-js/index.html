@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <label for="input"></label>
+    <input type="text" id="input">
+
+    <input type="submit" id="submit">
+
+    <script>
+        document.getElementById("submit").onclick = function() {
+            console.log(document.getElementById("input").value);
+        };
+    </script>
+</body>
+</html>
